@@ -1,3 +1,6 @@
+常用JS方法收集
+```javascript 
+
 var TemplateEngine = function(html, options) {
     var re = /\{\{([^\}\}]+)?\}\}/g, 
     reExp = /(^( )?(if|for|else|switch|case|break|{|}))(.*)?/g, 
@@ -19,3 +22,4 @@ var TemplateEngine = function(html, options) {
     code += 'return r.join("");';
     return new Function(code.replace(/[\r\t\n]/g, '')).apply(options);
 }
+```

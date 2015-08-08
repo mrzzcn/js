@@ -9,4 +9,37 @@ xcode-select --install
 下载 [Get the php code in a tar.gz](http://php.net/downloads.php)
 下载完之后解压上述文件到 mcrypt
 
-#3 
+#3 编译安装
+```bash
+cd ~/mcrypt 
+cd libmcrypt-2.5.8 
+./configure
+make
+sudo make install
+```
+
+#4 Install autoconf – some more Terminal heavy lifting:
+```bash
+cd ~/mcrypt
+curl -O http://ftp.gnu.org/gnu/autoconf/autoconf-latest.tar.gz
+tar xvfz autoconf-latest.tar.gz
+cd autoconf-2.69/
+./configure
+make
+sudo make install
+```
+
+#5 Compile mcrypt php Extension 
+这里根据PHP代码下载的版本选择路径
+*第二行 需要写全路径*
+```bash
+cd ../php-5.x.x/ext/mcrypt/
+/usr/bin/phpize 
+// 下面这句后面追加系统的PHP环境路径，具体啥用我也不知道
+./configure  --with-php-config
+make
+sudo make install 
+```
+#6 在PHP.INI文件中增加 ```extension=mcrypt.so``` 即可
+
+#7 参考链接：http://coolestguidesontheplanet.com/install-mcrypt-php-mac-osx-10-10-yosemite-development-server/

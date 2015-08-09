@@ -41,5 +41,10 @@ make
 sudo make install 
 ```
 #6 在PHP.INI文件中增加 ```extension=mcrypt.so``` 即可
+如果没有php.ini 文件：
+```bash
+sudo cp /etc/php.ini.default /etc/php.ini
+sudo chmod u+w  /etc/php.ini
+```
 
 #7 参考链接：http://coolestguidesontheplanet.com/install-mcrypt-php-mac-osx-10-10-yosemite-development-server/

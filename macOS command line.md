@@ -1,27 +1,28 @@
 ##透明度
 #降低透明度
 
-defaults write com.apple.universalaccess reduceTransparency -bool true
+`defaults write com.apple.universalaccess reduceTransparency -bool true`
 
 #恢复默认透明度    
-defaults write com.apple.universalaccess reduceTransparency -bool false
+`defaults write com.apple.universalaccess reduceTransparency -bool false`
 
 
 ##应用程序
-#列出所有从AppStore下载的应用
-find /Applications -path '*Contents/_MASReceipt/receipt' -maxdepth 4 -print |\sed 's#.app/Contents/_MASReceipt/receipt#.app#g; s#/Applications/##'
+#列出所有从AppStore下载的应用    
+`find /Applications -path '*Contents/_MASReceipt/receipt' -maxdepth 4 -print |\sed 's#.app/Contents/_MASReceipt/receipt#.app#g; s#/Applications/##'`
 
 
 ##Safari浏览器
 #打开「开发模式菜单」和「Web调试器」
+```
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true && \
 defaults write com.apple.Safari IncludeDevelopMenu -bool true && \
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true && \
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true && \
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
-
+```
 #获取Safari浏览器当前打开页面的URL
-osascript -e 'tell application "Safari" to get URL of current tab of front window'
+`osascript -e 'tell application "Safari" to get URL of current tab of front window'`
 
 
 ##Xcode

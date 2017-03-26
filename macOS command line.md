@@ -1,7 +1,9 @@
 ##透明度
 #降低透明度
+
 defaults write com.apple.universalaccess reduceTransparency -bool true
-#恢复默认透明度
+
+#恢复默认透明度    
 defaults write com.apple.universalaccess reduceTransparency -bool false
 
 

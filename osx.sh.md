@@ -1,7 +1,8 @@
 使用U盘安装OSX
 
 ```bash
-sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/createinstallmedia --volume /Volumes/JKOSX --applicationpath /Applications/Install\ macOS\ Mojave.app --nointeraction
+sudo /Applications/Install\ macOS\ Big\ Sur.app/Contents/Resources/createinstallmedia --volume /Volumes/Install\ macOS\ Catalina --applicationpath /Applications/Install\ macOS\ Big\ Sur.app --nointeraction
+
 
 // 其中 /Volumes/JKOSX 为自定义的U盘路径
 
